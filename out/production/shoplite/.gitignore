@@ -1,0 +1,9 @@
+# compiled bytecode
+*.class
+
+# Maven build output
+target/
+
+# IntelliJ
+.idea/
+*.iml
