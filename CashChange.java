@@ -1,32 +1,28 @@
 public class CashChange {
     public static void main(String[] args) {
-        long price = 940_000;
-        long paid = 1_000_000;
+        long price = 997_000;
+        long paid = 1000_000;
 
         long change = paid - price;
-        long remaining = change;
-
-        long oneHundredBill = change / 100_000;
-        remaining = change % 100_000;
-
-        long fiftyBill = remaining / 50_000;
-        remaining = remaining % 50_000;
-
-        long twentyBill = remaining / 20_000;
-        remaining = remaining % 20_000;
-
-        long tenBill = remaining / 10_000;
-        remaining = remaining % 10_000;
-
-        long fiveBill = remaining / 5_000;
-        remaining = remaining % 5_000;
+        if (change < 0) {
+            throw new IllegalArgumentException("Customer paid " + paid + " but price is " + price);
+        }
+        long[] notes = {100_000, 50_000, 20_000, 10_000, 5_000};
 
         System.out.println("Change: " + change);
-        System.out.println("100000 x " + oneHundredBill);
-        System.out.println("50000 x " + fiftyBill);
-        System.out.println("20000 x " + twentyBill);
-        System.out.println("10000 x " + tenBill);
-        System.out.println("5000 x " + fiveBill);
 
+        long remaining = change;
+
+        for (int i = 0; i < notes.length; i++) {
+            long count = remaining / notes[i];            // how many of notes[i] fit into remaining?
+            remaining = remaining % notes[i];
+            //what's left after taking them out?
+            if (count > 0) {                   // only print notes that are actually given
+                System.out.println(notes[i] + " x " + count);
+            }
+        }
+        if (remaining > 0) {
+            throw new IllegalStateException("Cannot dispense exact change. Remaining unpaid amount: " + remaining + " VND");
+        }
     }
 }
