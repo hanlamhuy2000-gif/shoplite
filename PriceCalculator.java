@@ -1,10 +1,10 @@
 public class PriceCalculator {
     public static void main(String[] args) {
-        String memberTier = "NONE";
+        String memberTier = "PLATINUM";
 
         String productName = "Áo thun";
-        int quantity = 3;
-        long unitPrice = 250_000;
+        int quantity = 1;
+        long unitPrice = 12_345;
 
         final long FREE_SHIPPING_THRESHOLD = 500_000;
         final long VAT_PERCENT = 10;
@@ -37,7 +37,7 @@ public class PriceCalculator {
 
 
         System.out.println("Subtotal:  " + subtotal + " VND");
-        System.out.println("Discount:  (10%)" + "-" + discount + " VND");
+        System.out.println("Discount  (" + discountPercent + "%):" + "-" + discount + " VND");
         System.out.println("After discount:  " + discountedSubtotal + " VND");
         System.out.println("VAT (" + VAT_PERCENT + "%): " + vat + " VND");
         System.out.println("Shipping:  " + shipping + " VND");
