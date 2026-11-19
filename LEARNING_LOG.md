@@ -9,3 +9,10 @@
 - Built: a calculator
 - Confused me: nothing, I have a great understanding of the subject
 - Question: i have no question
+
+## day 3
+
+-make an installment plan with function while
+-im still not very sure how += work, I think im quite bad at logic thinking, and I dont know where should i put
+System.out.println.
+-I dont know what to ask
