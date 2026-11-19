@@ -1,13 +1,13 @@
 public class CashChange {
     public static void main(String[] args) {
-        long price = 997_000;
-        long paid = 1000_000;
+        long price = 455_000;
+        long paid = 1_000_000;
 
         long change = paid - price;
         if (change < 0) {
             throw new IllegalArgumentException("Customer paid " + paid + " but price is " + price);
         }
-        long[] notes = {100_000, 50_000, 20_000, 10_000, 5_000};
+        long[] notes = {200_000, 100_000, 50_000, 20_000, 10_000, 5_000};
 
         System.out.println("Change: " + change);
 
