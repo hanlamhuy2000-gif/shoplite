@@ -18,11 +18,17 @@ public class PriceCalculator {
     }
 
     static long calculateTotal(long unitPrice, int quantity, String tier) {
+        if (quantity <= 0) {
+            throw new IllegalArgumentException("quantity cant be zero or below");
+        }
+        if (unitPrice < 0) {
+            throw new IllegalArgumentException("price cant be below zero");
+        }
         long subtotal = unitPrice * quantity;
         long discountPercent = discountPercentFor(tier);
         long discount = percentOfRounded(subtotal, discountPercent);
         long discountedSubtotal = subtotal - discount;
-        
+
 // Business rule (PM confirmed): threshold applies to the DISCOUNTED subtotal
         long shipping;
         if (discountedSubtotal >= FREE_SHIPPING_THRESHOLD) {
@@ -48,5 +54,6 @@ public class PriceCalculator {
         check("Test 2: GOLD, 500k", 525_000, calculateTotal(250_000, 2, "GOLD"));
         check("Test 3: NONE, boundary", 550_000, calculateTotal(100_000, 5, "NONE"));
         check("Test 4: PLATINUM rounding", 41_542, calculateTotal(12_345, 1, "PLATINUM"));
+        check("Test 5: SILVER, free shipping after discount", 627000, calculateTotal(200_000, 3, "SILVER"));
     }
 }
