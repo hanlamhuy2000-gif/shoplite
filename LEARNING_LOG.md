@@ -16,3 +16,10 @@
 -im still not very sure how += work, I think im quite bad at logic thinking, and I dont know where should i put
 System.out.println.
 -I dont know what to ask
+
+## day 4
+
+-make a calculation with switch, loop, array , method and their caller.
+-a lot of new thing to learn, im kinda struglle to remember them all right now
+
+- not really understand unexpected and actual 
