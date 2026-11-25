@@ -16,7 +16,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return ("Áo thun 250000");   // e.g. "Áo thun (250000 VND)"
+        return name + " (" + price + " VND)";
     }
 
     public String getName() {
