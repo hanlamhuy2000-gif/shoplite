@@ -22,4 +22,10 @@ System.out.println.
 -make a calculation with switch, loop, array , method and their caller.
 -a lot of new thing to learn, im kinda struglle to remember them all right now
 
-- not really understand unexpected and actual 
+- not really understand unexpected and actual
+
+## day 5
+
+-learn about ==, isEqual() , isBlank() , .contains., get() , immutable
+-still confuse about super
+-no question left for now

@@ -16,12 +16,13 @@ public class ShopDemo {
         Customer hoa = new Customer("Hoa", "fire@gmail.com", "NONE");
 
 
-
         System.out.println(thuy);
         System.out.println(hoa);
 
-        new Customer("   ", "a@b.com", "GOLD");          // blank name
-        //new Customer("Lan", "lan.gmail.com", "GOLD");    // email without @
-        // new Customer("Lan", "lan@gmail.com", "DIAMOND"); // unknown tier
+
+        Product shirt1 = new Product("Áo thun", 250_000);
+        Product shirt2 = new Product("Áo thun", 250_000);
+        System.out.println(shirt1 == shirt2);
+        System.out.println(shirt1.equals(shirt2));
     }
 }
