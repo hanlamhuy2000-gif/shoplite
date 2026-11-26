@@ -26,9 +26,9 @@ public class ShopDemo {
         System.out.println(shirt1.equals(shirt2));
 
         System.out.println("--- payment options ---");
-        long total = 3_000_000;
+        long total = 60_000_000;
 
-        PaymentMethod[] methods = {new CardPayment(), new MomoPayment(), new CodPayment()};
+        PaymentMethod[] methods = {new CardPayment(), new MomoPayment(), new CodPayment(), new ZaloPayPayment()};
 
         for (int i = 0; i < methods.length; i++) {
             PaymentMethod method = methods[i];

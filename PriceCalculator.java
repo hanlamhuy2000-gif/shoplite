@@ -17,6 +17,10 @@ public class PriceCalculator {
         return (amount * percent + 50) / 100;
     }
 
+    static long perMilleOfRounded(long amount, long perMille) {   // per mille = per thousand (‰)
+        return (amount * perMille + 500) / 1000;
+    }
+
     static long calculateTotal(Product product, int quantity, String tier) {
         if (quantity <= 0) {
             throw new IllegalArgumentException("quantity cant be zero or below");

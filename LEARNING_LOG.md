@@ -29,3 +29,11 @@ System.out.println.
 -learn about ==, isEqual() , isBlank() , .contains., get() , immutable
 -still confuse about super
 -no question left for now
+
+## day 6
+
+-learn about interface, how to replace switch with it. forgotten case in switch only fail in run time but it fail in
+compile time with interface and can be fix sooner
+-bit confuse about return amount <= MAX_AMOUNT.
+
+- so only main file can be run with debug, there alway only one main? what happen when we have multiple main
