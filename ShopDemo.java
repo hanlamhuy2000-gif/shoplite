@@ -11,5 +11,17 @@ public class ShopDemo {
 
         System.out.println(shirt);
         System.out.println(hat);
+
+        Customer thuy = new Customer("Thuy", "water@gmail.com", "GOLD");
+        Customer hoa = new Customer("Hoa", "fire@gmail.com", "NONE");
+
+
+
+        System.out.println(thuy);
+        System.out.println(hoa);
+
+        new Customer("   ", "a@b.com", "GOLD");          // blank name
+        //new Customer("Lan", "lan.gmail.com", "GOLD");    // email without @
+        // new Customer("Lan", "lan@gmail.com", "DIAMOND"); // unknown tier
     }
 }
