@@ -24,5 +24,15 @@ public class ShopDemo {
         Product shirt2 = new Product("Áo thun", 250_000);
         System.out.println(shirt1 == shirt2);
         System.out.println(shirt1.equals(shirt2));
+
+        System.out.println("--- payment options ---");
+        long total = 3_000_000;
+
+        PaymentMethod[] methods = {new CardPayment(), new MomoPayment(), new CodPayment()};
+
+        for (int i = 0; i < methods.length; i++) {
+            PaymentMethod method = methods[i];
+            System.out.println(method.name() + ": fee " + method.fee(total) + ", available: " + method.canPay(total));
+        }
     }
 }
